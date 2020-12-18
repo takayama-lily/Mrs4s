@@ -1,0 +1,22 @@
+{
+  "name": "mrs4s",
+  "version": "0.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/takayama-lily/Mrs4s.git"
+  },
+  "author": "takayama",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/takayama-lily/Mrs4s/issues"
+  },
+  "homepage": "https://github.com/takayama-lily/Mrs4s#readme",
+  "dependencies": {
+    "discord.js": "^12.5.1"
+  }
+}
