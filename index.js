@@ -17,19 +17,18 @@ client.on('message', msg => {
     if (typeof res === "number" && String(res) === msg.content)
         return
     if (typeof res === undefined)
-        res = "undefined"
+        res = "<undefined>"
     else if (typeof res === "function")
         res = `<function:${res.name?res.name:"anonymous"}>`
-    else if (typeof res === "number")
+    else if (typeof res === "number" || typeof res === "bigint" || typeof res === "symbol")
         res = String(res)
-    else {
+    else if (typeof res !== "string") {
         try {
             res = JSON.stringify(res)
         } catch (e) {
             res = e.message
         }
     }
-    res = String(res)
     if (res.length > 2000)
         res = res.slice(0, 1998) + ".."
     msg.channel.send(res).catch(()=>{})
