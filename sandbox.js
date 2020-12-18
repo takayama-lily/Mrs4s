@@ -11,7 +11,6 @@ if (!fs.existsSync(dataPath)) {
     fs.mkdirSync(dataPath, {recursive: true, mode: 0o755})
 }
 
-Function.prototype.view = Function.prototype.toString
 Function.prototype.constructor = new Proxy(Function, {
     apply: ()=>{
         throw Error("What do you want to do?")
